@@ -18,7 +18,7 @@
      git clone https://github.com/adnan179/codeant_assignment.git
 2) Now that repo is cloned, move to the cloned folder, and let's install dependencies:
      ```bash
-       cd codeant
+       cd codeant_assignment
        npm install
 3) Now you're ready to run the project, use this command to run it:
      ```bash
