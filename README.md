@@ -15,7 +15,7 @@
 
 1) Clone the Github Repo using this command to your system:
    ```bash
-     git clone
+     git clone https://github.com/adnan179/codeant_assignment.git
 2) Now that repo is cloned, move to the cloned folder, and let's install dependencies:
      ```bash
        cd codeant
