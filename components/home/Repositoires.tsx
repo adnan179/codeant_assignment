@@ -13,10 +13,13 @@ const Repositories: React.FC = () => {
   return (
     <section className="p-3 md:p-6 w-full h-full flex flex-col md:border border-[#E9EAEB] rounded-lg md:shadow-[0px_0px_24px_0px_rgba(8,23,53,0.16)] md:mt-0 mt-[80px]">
       <div className="flex sm:flex-row flex-col justify-between sm:items-center gap-4">
+        {/* heading and no.of repos */}
         <div className="flex flex-col gap-2">
           <h1 className="font-bold text-[20px] lg:text-[24px] text-[#171717]">Repositories</h1>
           <p className="text-[14px]">33 total repositories</p>
         </div>
+         {/* heading and no.of repos */}
+        {/* refresh and add repo btns */}
         <div className="flex gap-3">
           <button className="flex px-4 py-2 gap-2 justify-center items-center border border-[#D8DAE5] rounded-lg">
             <Image src={refreshIcon} alt="refresh" />
@@ -28,6 +31,8 @@ const Repositories: React.FC = () => {
           </button>
         </div>
       </div>
+      {/* refresh and add repo btns */}
+      {/* search bar */}
       <div className="relative flex items-center pt-4">
         {/* Search Icon */}
         <div className="absolute left-3">
@@ -40,6 +45,8 @@ const Repositories: React.FC = () => {
           className="pl-10 pr-4 py-2 w-auto rounded-lg border border-[#D5D7DA] focus:ring-2 focus:ring-blue-500 focus:outline-none"
         />
       </div>
+      {/* search bar */}
+      {/* Repositories */}
       <div className="flex flex-col w-full gap-0 mt-2">
         {repoData.map((data,idx) => (
           <div key={idx} className="border-t border-b border-[#D5D7DA] flex flex-col gap-3 p-4 cursor-pointer hover:bg-[#F5F5F5]">
@@ -55,6 +62,7 @@ const Repositories: React.FC = () => {
           </div>
         ))}
       </div>
+      {/* Repositories */}
     </section>
   )
 }

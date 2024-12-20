@@ -11,6 +11,7 @@ import phone from "../../public/phone_icon.svg";
 import logout from "../../public/logout_icon.svg";
 import hamburger from "../../public/hamburger.svg";
 import closeIcon from "../../public/close_icon.svg";
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
 
@@ -18,13 +19,13 @@ const Navbar: React.FC = () => {
   const [user, setUser] = useState<string>("Adnan Shaik");
   
   const links = [
-    { id: "home", label: "Repositories", icon: homeIcon },
-    { id: "code", label: "AI Code Review", icon: codeIcon },
-    { id: "cloud", label: "Cloud Security", icon: cloudIcon },
-    { id: "how to use", label: "How to Use", icon: bookIcon },
-    { id: "settings", label: "Settings", icon: settingsIcon },
-    { id: "support", label: "Support", icon: phone },
-    { id: "logout", label: "Logout", icon: logout },
+    { id: "home", label: "Repositories", icon: homeIcon,link:"/home" },
+    { id: "code", label: "AI Code Review", icon: codeIcon, link:"/home" },
+    { id: "cloud", label: "Cloud Security", icon: cloudIcon, link:"/home" },
+    { id: "how to use", label: "How to Use", icon: bookIcon, link:"/home" },
+    { id: "settings", label: "Settings", icon: settingsIcon, link:"/home" },
+    { id: "support", label: "Support", icon: phone, link:"/home" },
+    { id: "logout", label: "Logout", icon: logout, link:"/" },
   ];
 
   const handleMenuToggle = () => {
@@ -71,13 +72,13 @@ const Navbar: React.FC = () => {
             {/* Links */}
             <ul className="flex flex-col items-start gap-4 p-5">
               {links.map((link) => (
-                <li
+                <Link href={link.link}
                   key={link.id}
                   className="flex items-center gap-3 text-[16px] font-medium cursor-pointer"
                 >
                   <Image src={link.icon} alt={`${link.label}-icon`} />
                   {link.label}
-                </li>
+                </Link>
               ))}
             </ul>
           </div>
